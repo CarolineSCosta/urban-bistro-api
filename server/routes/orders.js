@@ -12,7 +12,7 @@ router
   });
 
 router
-  .route('/order:Id')
+  .route('/:id')
   .get((req, res) => {
     req.send('Pega dados do pedido');
   })

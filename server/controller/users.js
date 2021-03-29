@@ -1,5 +1,3 @@
-// aqui vai o código que acessa o banco de dados
-
 const database = require('../db/models');
 
 class UsersController {
