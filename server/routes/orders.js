@@ -3,25 +3,19 @@ const controller = require('../controller/orders');
 
 const router = express.Router();
 
-const { createOrder } = controller;
+const {
+  getOrders, createOrder, getOrderById, updateOrder, deleteOrder,
+} = controller;
 
 router
   .route('/')
-  .get((req, res) => {
-    req.send('Cria novo produto');
-  })
+  .get(getOrders)
   .post(createOrder);
 
 router
   .route('/:id')
-  .get((req, res) => {
-    req.send('Pega dados do pedido');
-  })
-  .put((req, res) => {
-    req.send('Atualiza os dados do pedido');
-  })
-  .delete((req, res) => {
-    req.send('Deleta os dados do pedido');
-  });
+  .get(getOrderById)
+  .put(updateOrder)
+  .delete(deleteOrder);
 
 module.exports = router;
