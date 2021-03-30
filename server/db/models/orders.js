@@ -5,7 +5,16 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Orders extends Model {
     static associate(models) {
-      // define association here
+      Orders.belongsTo(models.Users, {
+        foreignKey: 'user_id',
+        as: 'user',
+      });
+      Orders.belongsToMany(models.Products, {
+        through: 'ProductOrders',
+        as: 'products',
+        foreignKey: 'order_id',
+        otherKey: 'product_id',
+      });
     }
   }
   Orders.init({

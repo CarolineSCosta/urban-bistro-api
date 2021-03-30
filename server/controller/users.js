@@ -1,5 +1,3 @@
-// aqui vai o código que acessa o banco de dados
-
 const database = require('../db/models');
 
 class UsersController {
@@ -30,26 +28,13 @@ class UsersController {
     const { body } = req;
     body.updatedAt = new Date();
 
-    await database.Users.update(body,
-      {
-        where: {
-          id: req.params.id,
-        },
-      });
-
+    await database.Users.update(body, { where: { id: req.params.id } });
     return UsersController.getUserById(req, res);
   }
 
   static async deleteUser(req, res) {
     const user = await database.Users.findByPk(req.params.id);
-    await database.Users.destroy(
-      {
-        where: {
-          id: req.params.id,
-        },
-      },
-    );
-
+    await database.Users.destroy({ where: { id: req.params.id } });
     return res.status(200).json(user);
   }
 }
