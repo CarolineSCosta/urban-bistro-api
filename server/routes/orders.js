@@ -1,15 +1,16 @@
 const express = require('express');
+const controller = require('../controller/orders');
 
 const router = express.Router();
+
+const { createOrder } = controller;
 
 router
   .route('/')
   .get((req, res) => {
     req.send('Cria novo produto');
   })
-  .post((req, res) => {
-    req.send('Cria novo pedido');
-  });
+  .post(createOrder);
 
 router
   .route('/:id')
