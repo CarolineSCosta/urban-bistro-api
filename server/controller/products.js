@@ -6,7 +6,7 @@ class ProductsController {
       const products = await database.Products.findAll();
       return res.status(200).json(products);
     } catch (error) {
-      return res.status(400).json({ message: 'ocorreu um erro' });
+      return res.status(400).json({ message: error.message });
     }
   }
 

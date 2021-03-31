@@ -6,7 +6,7 @@ class UsersController {
       const users = await database.Users.findAll();
       return res.status(200).json(users);
     } catch (error) {
-      return res.status(400).json({ message: 'ocorreu um erro' });
+      return res.status(400).json({ message: error.message });
     }
   }
 
