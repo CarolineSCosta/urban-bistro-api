@@ -4,7 +4,7 @@ const controller = require('../controller/orders');
 const router = express.Router();
 
 const {
-  getOrders, createOrder, getOrderById,
+  getOrders, createOrder, getOrderById, updateOrder, deleteOrder,
 } = controller;
 
 router
@@ -14,8 +14,8 @@ router
 
 router
   .route('/:id')
-  .get(getOrderById);
-/* .put(updateOrder)
-.delete(deleteOrder);
-*/
+  .get(getOrderById)
+  .put(updateOrder)
+  .delete(deleteOrder);
+
 module.exports = router;
