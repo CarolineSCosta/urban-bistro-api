@@ -11,31 +11,47 @@ class ProductsController {
   }
 
   static async createProduct(req, res) {
-    const { body } = req;
-    body.createdAt = new Date();
-    body.updatedAt = new Date();
+    try {
+      const { body } = req;
+      body.createdAt = new Date();
+      body.updatedAt = new Date();
 
-    const product = await database.Products.create(body);
-    return res.status(200).json(product);
+      const product = await database.Products.create(body);
+      return res.status(200).json(product);
+    } catch (error) {
+      return res.status(400).json({ message: error.message });
+    }
   }
 
   static async getProductById(req, res) {
-    const product = await database.Products.findByPk(req.params.id);
-    return res.status(200).json(product);
+    try {
+      const product = await database.Products.findByPk(req.params.id);
+      return res.status(200).json(product);
+    } catch (error) {
+      return res.status(400).json({ message: error.message });
+    }
   }
 
   static async updateProduct(req, res) {
-    const { body } = req;
-    body.updatedAt = new Date();
+    try {
+      const { body } = req;
+      body.updatedAt = new Date();
 
-    await database.Products.update(body, { where: { id: req.params.id } });
-    return ProductsController.getProductById(req, res);
+      await database.Products.update(body, { where: { id: req.params.id } });
+      return res.status(200).json(ProductsController.getProductById(req, res));
+    } catch (error) {
+      return res.status(400).json({ message: error.message });
+    }
   }
 
   static async deleteProduct(req, res) {
-    const product = await database.Products.findByPk(req.params.id);
-    await database.Products.destroy({ where: { id: req.params.id } });
-    return res.status(200).json(product);
+    try {
+      const product = await database.Products.findByPk(req.params.id);
+      await database.Products.destroy({ where: { id: req.params.id } });
+      return res.status(200).json(product);
+    } catch (error) {
+      return res.status(400).json({ message: error.message });
+    }
   }
 }
 
