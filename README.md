@@ -1,7 +1,5 @@
 # Urban Bistro - API
 
-✨ Acessar a aplicação [urban bistro](https://urban-bistro.vercel.app/) ✨
-
 ## Índice
 
 -   [1. Introdução](#1-Introdução)
@@ -13,7 +11,7 @@
 ## 1. Introdução
 
 <p align="justify">
-A interface front-end da aplicação [Urban Bistro](https://urban-bistro.vercel.app/) já foi criada e consiste no gerenciamento de pedidos, e sincronizar as informações de comandas entre cozinha e salão. O objetivo dessa aplicação era criar servidor web que através de uma API rest, integrada a um banco de dados relacional, fornece métodos de manipulação CRUD seguindo o modelo de arquitetura MVC (Model View Controller).
+A interface <b>front-end</b> da aplicação <a href= "https://urban-bistro.vercel.app/" target="_blank">Urban Bistro</a> já foi criada e consiste no gerenciamento de pedidos e sincronizar as informações de comandas entre cozinha e salão. O objetivo dessa aplicação era criar servidor web que através de uma <b>API rest</b>, integrada a um banco de dados relacional, fornece métodos de manipulação <b>CRUD</b> seguindo o modelo de arquitetura <b>MVC</b> (Model View Controller).
 </p>
 
 ## 2. Estrutura do banco de dados
@@ -28,7 +26,9 @@ Um banco de dados é uma coleção de dados inter-relacionados, representando in
 
 ## 3. Utilização e documentação
 
-Você pode acessar a [documentação da API](https://urban-bistro.herokuapp.com/swagger) que auxilia no entendimento das rotas e possibilita a execução das requisições.
+<p align="justify">
+Você pode acessar a <a href= "https://urban-bistro.herokuapp.com/swagger" target="_blank">documentação da API</a> que auxilia no entendimento das rotas e possibilita a execução das requisições.
+</p>
 
 ## 4. Desenvolvimento
 
@@ -41,7 +41,7 @@ Você pode acessar a [documentação da API](https://urban-bistro.herokuapp.com/
 -   PostgreSQL
 -   Postman
 -   ESLint
--   Dbeaver
+-   DBeaver
 -   Swagger
 
 ## 5. Desenvolvedora
