@@ -28,7 +28,7 @@ Um banco de dados é uma coleção de dados inter-relacionados, representando in
 
 ## 3. Utilização e documentação
 
-Você pode acessar a [documentação da API](https://urban-bistro.herokuapp.com/) que auxilia no entendimento das rotas e possibilita a execução das requisições.
+Você pode acessar a [documentação da API](https://urban-bistro.herokuapp.com/swagger) que auxilia no entendimento das rotas e possibilita a execução das requisições.
 
 ## 4. Desenvolvimento
 
@@ -42,6 +42,7 @@ Você pode acessar a [documentação da API](https://urban-bistro.herokuapp.com/
 -   Postman
 -   ESLint
 -   Dbeaver
+-   Swagger
 
 ## 5. Desenvolvedora
 
